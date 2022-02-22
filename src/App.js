@@ -3,7 +3,7 @@ import DataGrid from 'react-data-grid';
 import data from './data';
 import './App.css';
 import { generateColumns } from './data-utils';
-import { VictoryBar } from 'victory';
+import { VictoryBar, VictoryChart, VictoryPie } from 'victory';
 
 function App() {
   return <>
@@ -11,6 +11,9 @@ function App() {
       columns={generateColumns(data)}
       rows={data}
     />
+    <VictoryBar></VictoryBar>
+    <VictoryPie></VictoryPie>
+    <VictoryChart></VictoryChart>
 
 
 
