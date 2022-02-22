@@ -1,15 +1,18 @@
 import React from 'react';
-// import DataGrid from 'react-data-grid';
+import DataGrid from 'react-data-grid';
 import data from './data';
 import './App.css';
+import { generateColumns } from './data-utils';
+import { VictoryBar } from 'victory';
 
 function App() {
-  console.log(data);
-  return (
-    <div className="App">
-     
-    </div>
-  );
-}
+  return <>
+    <DataGrid
+      columns={generateColumns(data)}
+      rows={data}
+    />
 
+
+
+  </>;}
 export default App;
