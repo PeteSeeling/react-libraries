@@ -15,7 +15,7 @@ function App() {
     <VictoryBar
      
     />
-    <VictoryPie data={[{ x:'gender', y:{ makeCountByGender } }]} />
+    <VictoryPie data={[{ y:'gender', x:{ makeCountByGender } }]} />
     <VictoryChart></VictoryChart>
 
 
