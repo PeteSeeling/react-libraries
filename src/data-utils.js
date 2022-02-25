@@ -17,15 +17,15 @@ export function generateColumns(arr){
   return columns;
 }
 
-export function makeCountByColor(arr) {
+export function makeCountByGender(arr) {
   const countTotalColor = arr.reduce((acc, curr) => {
     if (acc[curr.id]){
-      acc[curr.id].count++;
-      acc[curr.id].total = acc[curr.id].total + curr.gender;
+      acc[curr.gender].count++;
+      acc[curr.gender].total = acc[curr.id].total + curr.gender;
     } else {
-      acc[curr.id] = {};
-      acc[curr.id].count = 1;
-      acc[curr.id].total = curr.gender;
+      acc[curr.gender] = {};
+      acc[curr.gender].count = 1;
+      acc[curr.gender].total = curr.gender;
     }
     return acc;
 
