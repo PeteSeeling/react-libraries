@@ -5,6 +5,7 @@ import './App.css';
 import { generateColumns, makeCountByGender } from './data-utils';
 import { VictoryBar, VictoryChart, VictoryPie } from 'victory';
 
+
 function App() {
   return <>
     <DataGrid
@@ -12,8 +13,9 @@ function App() {
       rows={data}
     />
     <VictoryBar
-      columns={makeCountByGender} />
-    <VictoryPie ></VictoryPie>
+     
+    />
+    <VictoryPie data={[{ x:'gender', y:{ makeCountByGender } }]} />
     <VictoryChart></VictoryChart>
 
 
