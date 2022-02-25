@@ -11,8 +11,9 @@ function App() {
       columns={generateColumns(data)}
       rows={data}
     />
-    <VictoryBar data={makeCountByGender()} />
-    <VictoryPie></VictoryPie>
+    <VictoryBar
+      columns={makeCountByGender} />
+    <VictoryPie ></VictoryPie>
     <VictoryChart></VictoryChart>
 
 

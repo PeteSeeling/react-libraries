@@ -17,24 +17,17 @@ export function generateColumns(arr){
   return columns;
 }
 
-export function makeCountByGender(arr) {
-  const countTotalColor = arr.reduce((acc, curr) => {
-    if (acc[curr.id]){
-      acc[curr.gender].count++;
-      acc[curr.gender].total = acc[curr.id].total + curr.gender;
-    } else {
-      acc[curr.gender] = {};
-      acc[curr.gender].count = 1;
-      acc[curr.gender].total = curr.gender;
+export function makeCountByGender(data) {
+  const totalGender = data.reduce((acc, customer)=>{
+    if (acc[customer.gender]){
+      acc[customer.gender]++;
+    }
+    else {
+      acc[customer.gender] = 1;
     }
     return acc;
-
   }, {});
-
-  return Object.entries(countTotalColor)
-    .map(entry => ({
-      id: entry[0],
-      gender: entry[1].total / entry[1].count,
-
-    }));
+  return totalGender;
 }
+
+ 
